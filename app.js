@@ -246,11 +246,21 @@ function renderProducts() {
 
     if (p.play) {
       const g = document.createElement('a');
+      g.className = 'play-badge-link play-badge-compact';
       g.href = addTracking(p.play, `play-${i + 1}`);
       g.rel = 'noopener';
-      g.dataset.en = 'Play Demo ↗';
-      g.dataset.ar = 'تجربة Play ↗';
-      g.textContent = ar ? g.dataset.ar : g.dataset.en;
+      g.setAttribute('aria-label', ar ? `احصل على ${p.ar} من Google Play` : `Get ${p.name} on Google Play`);
+      const badge = document.createElement('img');
+      badge.className = 'play-badge-img';
+      badge.width = 646;
+      badge.height = 250;
+      badge.dataset.srcEn = 'assets/badges/google-play-en.png';
+      badge.dataset.srcAr = 'assets/badges/google-play-ar.png';
+      badge.dataset.altEn = `Get ${p.name} on Google Play`;
+      badge.dataset.altAr = `احصل على ${p.ar} من Google Play`;
+      badge.src = ar ? badge.dataset.srcAr : badge.dataset.srcEn;
+      badge.alt = ar ? badge.dataset.altAr : badge.dataset.altEn;
+      g.append(badge);
       links.append(g);
     }
 
@@ -336,6 +346,13 @@ function setLanguage(lang) {
 
   document.querySelectorAll('[data-en]').forEach((el) => {
     el.textContent = ar ? el.dataset.ar : el.dataset.en;
+  });
+
+  document.querySelectorAll('img[data-src-en]').forEach((img) => {
+    img.src = ar ? img.dataset.srcAr : img.dataset.srcEn;
+    if (img.dataset.altEn) {
+      img.alt = ar ? img.dataset.altAr : img.dataset.altEn;
+    }
   });
 
   const titleMeta = document.querySelector(ar ? 'meta[name="title-ar"]' : 'meta[name="title-en"]');
