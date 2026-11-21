@@ -131,6 +131,158 @@ section { padding: 72px 0; border-bottom: 1px solid #ffffff12; }
   transform: rotate(1deg);
 }
 .hero-art img { display: block; width: 100%; height: auto; }
+.hero-art-visual {
+  padding: 22px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(159, 240, 206, .16), transparent 46%),
+    radial-gradient(circle at 14% 92%, rgba(242, 189, 98, .12), transparent 48%),
+    linear-gradient(148deg, #172338 0%, #101724 58%, #0e2022 100%);
+  border: 1px solid #35506d;
+}
+.publish-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.pv-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.pv-emblem {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1b2d46, #111c2c);
+  border: 1px solid #416283;
+  box-shadow: inset 0 1px 0 #ffffff1a;
+}
+.pv-kicker {
+  display: block;
+  font-size: .66rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+  color: var(--mint);
+}
+.pv-title {
+  display: block;
+  font-size: 1.06rem;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.pv-price-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+body[dir=rtl] .pv-price-badge { align-items: flex-start; }
+.pv-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: #0a2018;
+  font-size: .92rem;
+  font-weight: 900;
+  letter-spacing: -.01em;
+}
+.pv-price-sub {
+  font-size: .68rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.pv-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.pv-step {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 12px;
+  border-radius: 13px;
+  background: rgba(11, 16, 26, .66);
+  border: 1px solid #2b3c54;
+}
+.pv-step-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #172438;
+  border: 1px solid #354c68;
+}
+.pv-step-body { min-width: 0; }
+.pv-step-title {
+  display: block;
+  font-size: .88rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.pv-step-desc {
+  display: block;
+  font-size: .78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.pv-pill {
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #376d5f;
+  background: rgba(159, 240, 206, .08);
+  color: var(--mint);
+  font-size: .67rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.pv-pill-gold {
+  border-color: #6b5632;
+  background: rgba(242, 189, 98, .10);
+  color: var(--gold);
+}
+.pv-safeguards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-top: 2px;
+}
+.pv-safe-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #0d1522;
+  border: 1px solid #2a3a52;
+  color: #d6e2f1;
+  font-size: .72rem;
+  font-weight: 700;
+}
+.pv-safe-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--mint);
+  flex: 0 0 7px;
+}
 
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .button {
@@ -630,8 +782,12 @@ body[dir=rtl] .features li { padding: 3px 4px 3px 0; }
   .top { position: static; flex-wrap: wrap; }
   .top nav { order: 3; width: 100%; gap: 12px; }
   .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 40px; }
-  .hero-art { transform: none; order: -1; }
+  .hero-art, body[dir=rtl] .hero-art { transform: none; order: -1; }
   .hero-art img { max-height: 230px; object-fit: cover; }
+  .hero-art-visual { padding: 15px; border-radius: 18px; }
+  .pv-step { grid-template-columns: 32px 1fr; gap: 9px; padding: 10px; }
+  .pv-step-icon { width: 32px; height: 32px; }
+  .pv-pill { grid-column: 2; justify-self: start; }
   .hero h1 { font-size: clamp(2.9rem, 14vw, 4.5rem); }
   section { padding: 54px 0; }
   .showcase { padding: 16px; margin: 18px 0; gap: 20px; }
