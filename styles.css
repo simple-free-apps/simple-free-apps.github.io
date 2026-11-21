@@ -785,6 +785,7 @@ body[dir=rtl] .features li { padding: 3px 4px 3px 0; }
   .hero-art, body[dir=rtl] .hero-art { transform: none; order: -1; }
   .hero-art img { max-height: 230px; object-fit: cover; }
   .hero-art-visual { padding: 15px; border-radius: 18px; }
+  .pv-price-badge, body[dir=rtl] .pv-price-badge { flex-direction: row; align-items: center; gap: 8px; }
   .pv-step { grid-template-columns: 32px 1fr; gap: 9px; padding: 10px; }
   .pv-step-icon { width: 32px; height: 32px; }
   .pv-pill { grid-column: 2; justify-self: start; }
