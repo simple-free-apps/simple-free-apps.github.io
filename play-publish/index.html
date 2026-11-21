@@ -57,7 +57,11 @@
       <p class="kicker" data-en="GOOGLE PLAY DEVELOPER SUPPORT" data-ar="دعم مطوري GOOGLE PLAY">GOOGLE PLAY DEVELOPER SUPPORT</p>
       <h1 data-en="Publishing &amp; transfer assistance" data-ar="مساعدة النشر ونقل التطبيقات">Publishing &amp; transfer assistance</h1>
       <p class="lead" data-en="$45 for an eligibility review and guided assistance with a compliant app publishing or transfer workflow." data-ar="45 دولاراً لمراجعة الأهلية والمساعدة الإرشادية في نشر تطبيق متوافق أو نقله.">$45 for an eligibility review and guided assistance with a compliant app publishing or transfer workflow.</p>
-      <a class="button" href="mailto:Gr8.free.app@gmail.com?subject=Google%20Play%20publishing%20eligibility" data-en="Request eligibility review ↗" data-ar="اطلب مراجعة الأهلية ↗">Request eligibility review ↗</a>
+      <div class="hero-actions">
+        <a class="button" href="#pp-precheck" data-en="Check readiness &amp; request ↗" data-ar="افحص الجاهزية واطلب الخدمة ↗">Check readiness &amp; request ↗</a>
+        <a class="button button-secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Gr8.free.app@gmail.com&amp;su=Google%20Play%20Publishing%20Eligibility%20(%2445)" target="_blank" rel="noopener noreferrer" data-en="Open Gmail Web ↗" data-ar="فتح Gmail ويب ↗">Open Gmail Web ↗</a>
+      </div>
+      <p class="quiet-link" data-en="Direct email: Gr8.free.app@gmail.com · The pre-check form below prepares your exact message." data-ar="البريد المباشر: Gr8.free.app@gmail.com · النموذج أدناه يجهّز رسالتك جاهزة للإرسال أو النسخ.">Direct email: Gr8.free.app@gmail.com · The pre-check form below prepares your exact message.</p>
     </div>
     <div class="hero-art hero-art-visual">
       <div class="publish-visual">
@@ -152,7 +156,7 @@
     </p>
   </section>
 
-  <section class="about">
+  <section id="pp-precheck" class="about">
     <h2 data-en="Pre-check your eligibility &amp; build your request" data-ar="افحص جاهزيتك وأنشئ طلب المراجعة">Pre-check your eligibility &amp; build your request</h2>
     <p data-en="Fill in non-sensitive project details to verify baseline requirements locally and generate a structured email. Never send passwords, OTPs, or signing keys." data-ar="أدخل بيانات التطبيق غير الحساسة للتحقق من الجاهزية وتوليد رسالة منظمة. لا ترسل كلمات مرور أو رموز تحقق أو مفاتيح توقيع.">Fill in non-sensitive project details to verify baseline requirements locally and generate a structured email. Never send passwords, OTPs, or signing keys.</p>
     <div class="readiness-card">
@@ -176,7 +180,9 @@
       <label class="readiness-check"><input id="pp-clean" type="checkbox"> <span data-en="App complies with Google Play policies (original/licensed assets, no malware, no gambling, no IP infringement)" data-ar="التطبيق متوافق مع سياسات Google Play (أصول مرخصة، بلا برامج ضارة أو قمار أو انتهاك حقوق)">App complies with Google Play policies (original/licensed assets, no malware, no gambling, no IP infringement)</span></label>
       <label class="readiness-check"><input id="pp-terms" type="checkbox"> <span data-en="I understand this $45 service does not bypass Google closed-testing, verification, or review rules" data-ar="أدرك أن خدمة 45$ لا تتجاوز الاختبارات المغلقة أو التوثيق أو مراجعة Google">I understand this $45 service does not bypass Google closed-testing, verification, or review rules</span></label>
       <div class="hero-actions">
-        <a id="pp-mailto" class="button" href="mailto:Gr8.free.app@gmail.com?subject=Google%20Play%20publishing%20eligibility" data-en="Open structured eligibility email ↗" data-ar="افتح رسالة فحص الأهلية ↗">Open structured eligibility email ↗</a>
+        <a id="pp-mailto" class="button" href="mailto:Gr8.free.app@gmail.com?subject=Google%20Play%20publishing%20eligibility" data-en="Open structured email app ↗" data-ar="فتح تطبيق البريد ↗">Open structured email app ↗</a>
+        <a id="pp-gmail" class="button button-secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Gr8.free.app@gmail.com" target="_blank" rel="noopener noreferrer" data-en="Send via Gmail Web ↗" data-ar="إرسال عبر Gmail ويب ↗">Send via Gmail Web ↗</a>
+        <button id="pp-copy" type="button" class="button button-secondary" style="font:inherit;cursor:pointer" data-en="Copy request + email" data-ar="نسخ الطلب + البريد">Copy request + email</button>
       </div>
       <div id="pp-status" class="readiness-output" aria-live="polite"></div>
     </div>
@@ -190,14 +196,18 @@
   const clean = document.getElementById('pp-clean');
   const terms = document.getElementById('pp-terms');
   const link = document.getElementById('pp-mailto');
+  const gmail = document.getElementById('pp-gmail');
+  const copyBtn = document.getElementById('pp-copy');
   const out = document.getElementById('pp-status');
   if (!pkg || !link || !out) return;
+  let lastPayload = '';
   function refresh() {
     const ar = document.documentElement.lang === 'ar';
     const ok = Boolean(pkg.value.trim()) && clean.checked && terms.checked;
     out.textContent = ok
-      ? (ar ? 'جاهز مبدئياً للإرسال: اضغط الزر لفتح بريدك بتفاصيل الفحص الأولي ($45 بعد تأكيد الأهلية).' : 'Ready for eligibility review: click the button to send your structured non-sensitive request ($45 due only after eligibility is confirmed).')
-      : (ar ? 'أكمل معرّف الحزمة وتأكيدَي التوافق والشروط لتجهيز رسالة الأهلية.' : 'Enter a package ID and confirm both policy and terms checkboxes to build your eligibility check email.');
+      ? (ar ? 'جاهز للإرسال إلى Gr8.free.app@gmail.com ($45 بعد تأكيد الأهلية): اختر Gmail ويب أو تطبيق البريد أو انسخ النص.' : 'Ready to send to Gr8.free.app@gmail.com ($45 due only after eligibility is confirmed): use Gmail Web, your email client, or copy the request text.')
+      : (ar ? 'أكمل معرّف الحزمة وتأكيدَي التوافق والشروط لتجهيز الرسالة (أو استخدم النسخ/Gmail مباشرة إلى Gr8.free.app@gmail.com).' : 'Enter a package ID and confirm both checkboxes to prepare the structured request (or message Gr8.free.app@gmail.com via Gmail Web).');
+    const subj = 'Google Play Publishing Eligibility ($45) — ' + (pkg.value.trim() || 'App Check');
     const body = [
       'Package ID: ' + (pkg.value.trim() || '[not specified]'),
       'Account type: ' + acct.value,
@@ -207,7 +217,25 @@
       '',
       'Note: No credentials, OTPs, or signing keys included.'
     ].join('\n');
-    link.href = 'mailto:Gr8.free.app@gmail.com?subject=' + encodeURIComponent('Google Play Publishing Eligibility ($45) — ' + (pkg.value.trim() || 'App Check')) + '&body=' + encodeURIComponent(body);
+    lastPayload = 'To: Gr8.free.app@gmail.com\nSubject: ' + subj + '\n\n' + body;
+    link.href = 'mailto:Gr8.free.app@gmail.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+    if (gmail) {
+      gmail.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=Gr8.free.app@gmail.com&su=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+    }
+  }
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const ar = document.documentElement.lang === 'ar';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lastPayload).then(() => {
+          out.textContent = ar ? 'تم نسخ نص الطلب والبريد (Gr8.free.app@gmail.com) إلى الحافظة.' : 'Copied request details and Gr8.free.app@gmail.com to clipboard.';
+        }).catch(() => {
+          out.textContent = lastPayload;
+        });
+      } else {
+        out.textContent = lastPayload;
+      }
+    });
   }
   [pkg, acct, stage, clean, terms].forEach((el) => el.addEventListener('input', refresh));
   [clean, terms].forEach((el) => el.addEventListener('change', refresh));
