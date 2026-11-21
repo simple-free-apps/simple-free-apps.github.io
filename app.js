@@ -9,6 +9,7 @@ const products = [
     desc: 'Water-sort puzzles with hidden layers, keyed flasks, chapter trials and a certified hint solver. Offline play.',
     descAr: 'ألغاز فرز الماء بطبقات مخفية وقوارير مقفلة وتحديات فصول وحلّال تلميحات موثوق. لعب دون اتصال.',
     img: 'assets/catalog/liquidsort-hero.jpg',
+    demo: 'demo/?game=liquid',
     codester: 'https://www.codester.com/items/64630/liquid-sort-puzzle-kotlin-android-game-template?ref=Gr8Man',
     play: 'https://play.google.com/store/apps/details?id=com.gr8.games.liquidsortpuzzle',
     codPrice: 14
@@ -23,6 +24,7 @@ const products = [
     desc: 'Five offline puzzle games in one hub: light paths, tactical sliding, mosaics, kite escape and prism blocks.',
     descAr: 'خمس ألعاب ألغاز دون اتصال في مركز واحد: مسارات ضوئية وانزلاق تكتيكي وفسيفساء وطائرات ورقية وكتل منشورية.',
     img: 'assets/catalog/bundle5in1-hero.jpg',
+    demo: 'demo/?game=lantern',
     payhip: 'https://payhip.com/b/beFfj',
     payPrice: 12,
     codester: 'https://www.codester.com/items/76186/puzzle-pack-5-in-1-kotlin-android-game-bundle?ref=Gr8Man',
@@ -80,6 +82,7 @@ const products = [
     desc: 'Plan non-colliding escape paths for paper kites across six scenic chapters, plus daily flights.',
     descAr: 'خطّط لمسارات خروج آمنة للطائرات الورقية عبر ستة فصول، مع رحلات يومية.',
     img: 'assets/catalog/kivorivane-hero.jpg',
+    demo: 'demo/?game=kite',
     payhip: 'https://payhip.com/b/WsHQp',
     payPrice: 9,
     codester: 'https://www.codester.com/items/76093/kivorivane-1000-levels-kite-escape-kotlin?ref=Gr8Man',
@@ -136,6 +139,7 @@ const products = [
     desc: 'Rotate light-path pieces to illuminate each lantern. Includes an offline hint solver and Arabic RTL.',
     descAr: 'دوّر قطع مسار الضوء لإنارة الفوانيس، مع حلّال تلميحات يعمل دون اتصال ودعم العربية RTL.',
     img: 'assets/catalog/lanternloom-hero.jpg',
+    demo: 'demo/?game=lantern',
     codester: 'https://www.codester.com/items/75956/lanternloom-light-path-puzzle-game-for-android?ref=Gr8Man',
     codPrice: 14
   }
@@ -243,6 +247,15 @@ function renderProducts() {
     c.dataset.ar = `Codester · $${p.codPrice}`;
     c.textContent = c.dataset.en;
     links.append(c);
+
+    if (p.demo) {
+      const d = document.createElement('a');
+      d.href = p.demo;
+      d.dataset.en = 'Web Demo ↗';
+      d.dataset.ar = 'تجربة متصفح ↗';
+      d.textContent = ar ? d.dataset.ar : d.dataset.en;
+      links.append(d);
+    }
 
     if (p.play) {
       const g = document.createElement('a');

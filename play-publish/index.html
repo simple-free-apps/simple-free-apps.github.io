@@ -17,6 +17,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b101a">
 <link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Google Play Publishing & App Transfer Assistance",
+  "provider": {
+    "@type": "Organization",
+    "name": "Gr8 Apps & Games Studio",
+    "url": "https://simple-free-apps.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "45.00",
+    "priceCurrency": "USD"
+  },
+  "url": "https://simple-free-apps.github.io/play-publish/"
+}
+</script>
 <script src="../app.js" defer></script>
 </head>
 <body>
@@ -25,6 +43,7 @@
   <nav>
     <a href="../#inkear" data-en="Inkear" data-ar="إنكير">Inkear</a>
     <a href="../android-games/" data-en="Android games" data-ar="ألعاب أندرويد">Android games</a>
+    <a href="../demo/" data-en="Live Demos" data-ar="تجارب حية">Live Demos</a>
     <a href="../#catalog" data-en="Source kits" data-ar="حزم المصدر">Source kits</a>
     <a href="./" aria-current="page" data-en="Publishing help" data-ar="مساعدة النشر">Publishing help</a>
   </nav>
@@ -64,11 +83,68 @@
   </section>
 
   <section class="about">
-    <h2 data-en="Start with an eligibility check" data-ar="ابدأ بفحص الأهلية">Start with an eligibility check</h2>
-    <p data-en="Email the app package name, account type and country, and current testing or review stage. Do not include credentials or private source code." data-ar="أرسل اسم حزمة التطبيق ونوع الحساب وبلده ومرحلة الاختبار أو المراجعة الحالية. لا ترسل بيانات الدخول أو الشيفرة الخاصة.">Email the app package name, account type and country, and current testing or review stage. Do not include credentials or private source code.</p>
-    <a class="button" href="mailto:Gr8.free.app@gmail.com?subject=Google%20Play%20publishing%20eligibility" data-en="Email Gr8.free.app@gmail.com ↗" data-ar="راسل Gr8.free.app@gmail.com ↗">Email Gr8.free.app@gmail.com ↗</a>
+    <h2 data-en="Pre-check your eligibility &amp; build your request" data-ar="افحص جاهزيتك وأنشئ طلب المراجعة">Pre-check your eligibility &amp; build your request</h2>
+    <p data-en="Fill in non-sensitive project details to verify baseline requirements locally and generate a structured email. Never send passwords, OTPs, or signing keys." data-ar="أدخل بيانات التطبيق غير الحساسة للتحقق من الجاهزية وتوليد رسالة منظمة. لا ترسل كلمات مرور أو رموز تحقق أو مفاتيح توقيع.">Fill in non-sensitive project details to verify baseline requirements locally and generate a structured email. Never send passwords, OTPs, or signing keys.</p>
+    <div class="readiness-card">
+      <div class="readiness-grid">
+        <label><span data-en="Android package ID" data-ar="معرّف الحزمة (Package ID)">Android package ID</span><input id="pp-pkg" type="text" placeholder="com.example.mygame"></label>
+        <label><span data-en="Account &amp; region" data-ar="نوع الحساب والبلد">Account &amp; region</span>
+          <select id="pp-acct">
+            <option value="Personal (after Nov 2023)" data-en="Personal (created after Nov 2023)" data-ar="شخصي (بعد نوفمبر 2023)">Personal (created after Nov 2023)</option>
+            <option value="Personal (older / verified)" data-en="Personal (older / verified)" data-ar="شخصي (قديم / موثق)">Personal (older / verified)</option>
+            <option value="Organization account" data-en="Organization developer account" data-ar="حساب مطور مؤسسة">Organization developer account</option>
+          </select>
+        </label>
+        <label><span data-en="Current Play Console stage" data-ar="المرحلة الحالية">Current Play Console stage</span>
+          <select id="pp-stage">
+            <option value="Ready to create / draft" data-en="Ready for first release / draft" data-ar="جاهز لأول إصدار / مسودة">Ready for first release / draft</option>
+            <option value="In closed testing" data-en="Currently in closed testing" data-ar="في الاختبار المغلق حالياً">Currently in closed testing</option>
+            <option value="Transferring existing live app" data-en="Transferring existing live app" data-ar="نقل تطبيق منشور حالياً">Transferring existing live app</option>
+          </select>
+        </label>
+      </div>
+      <label class="readiness-check"><input id="pp-clean" type="checkbox"> <span data-en="App complies with Google Play policies (original/licensed assets, no malware, no gambling, no IP infringement)" data-ar="التطبيق متوافق مع سياسات Google Play (أصول مرخصة، بلا برامج ضارة أو قمار أو انتهاك حقوق)">App complies with Google Play policies (original/licensed assets, no malware, no gambling, no IP infringement)</span></label>
+      <label class="readiness-check"><input id="pp-terms" type="checkbox"> <span data-en="I understand this $45 service does not bypass Google closed-testing, verification, or review rules" data-ar="أدرك أن خدمة 45$ لا تتجاوز الاختبارات المغلقة أو التوثيق أو مراجعة Google">I understand this $45 service does not bypass Google closed-testing, verification, or review rules</span></label>
+      <div class="hero-actions">
+        <a id="pp-mailto" class="button" href="mailto:Gr8.free.app@gmail.com?subject=Google%20Play%20publishing%20eligibility" data-en="Open structured eligibility email ↗" data-ar="افتح رسالة فحص الأهلية ↗">Open structured eligibility email ↗</a>
+      </div>
+      <div id="pp-status" class="readiness-output" aria-live="polite"></div>
+    </div>
   </section>
 </main>
+<script>
+(function () {
+  const pkg = document.getElementById('pp-pkg');
+  const acct = document.getElementById('pp-acct');
+  const stage = document.getElementById('pp-stage');
+  const clean = document.getElementById('pp-clean');
+  const terms = document.getElementById('pp-terms');
+  const link = document.getElementById('pp-mailto');
+  const out = document.getElementById('pp-status');
+  if (!pkg || !link || !out) return;
+  function refresh() {
+    const ar = document.documentElement.lang === 'ar';
+    const ok = Boolean(pkg.value.trim()) && clean.checked && terms.checked;
+    out.textContent = ok
+      ? (ar ? 'جاهز مبدئياً للإرسال: اضغط الزر لفتح بريدك بتفاصيل الفحص الأولي ($45 بعد تأكيد الأهلية).' : 'Ready for eligibility review: click the button to send your structured non-sensitive request ($45 due only after eligibility is confirmed).')
+      : (ar ? 'أكمل معرّف الحزمة وتأكيدَي التوافق والشروط لتجهيز رسالة الأهلية.' : 'Enter a package ID and confirm both policy and terms checkboxes to build your eligibility check email.');
+    const body = [
+      'Package ID: ' + (pkg.value.trim() || '[not specified]'),
+      'Account type: ' + acct.value,
+      'Current stage: ' + stage.value,
+      'Policy-compliant confirmation: ' + (clean.checked ? 'Yes' : 'No'),
+      'Understands no testing/review bypass: ' + (terms.checked ? 'Yes' : 'No'),
+      '',
+      'Note: No credentials, OTPs, or signing keys included.'
+    ].join('\n');
+    link.href = 'mailto:Gr8.free.app@gmail.com?subject=' + encodeURIComponent('Google Play Publishing Eligibility ($45) — ' + (pkg.value.trim() || 'App Check')) + '&body=' + encodeURIComponent(body);
+  }
+  [pkg, acct, stage, clean, terms].forEach((el) => el.addEventListener('input', refresh));
+  [clean, terms].forEach((el) => el.addEventListener('change', refresh));
+  document.getElementById('language')?.addEventListener('click', () => setTimeout(refresh, 0));
+  refresh();
+})();
+</script>
 
 <footer>
   <span>© <span id="year"></span> <span data-en="Gr8 Apps &amp; Games Studio" data-ar="استوديو Gr8 للتطبيقات والألعاب">Gr8 Apps &amp; Games Studio</span></span>
