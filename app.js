@@ -25,8 +25,6 @@ const products = [
     descAr: 'خمس ألعاب ألغاز دون اتصال في مركز واحد: مسارات ضوئية وانزلاق تكتيكي وفسيفساء وطائرات ورقية وكتل منشورية.',
     img: 'assets/catalog/bundle5in1-hero.jpg',
     demo: 'demo/?game=lantern',
-    payhip: 'https://payhip.com/b/beFfj',
-    payPrice: 12,
     codester: 'https://www.codester.com/items/76186/puzzle-pack-5-in-1-kotlin-android-game-bundle?ref=Gr8Man',
     codPrice: 14
   },
@@ -40,8 +38,6 @@ const products = [
     desc: 'Build marble contraptions across clockwork worlds, then experiment in a 5×5 in-game level workshop.',
     descAr: 'ابنِ آلات للكرات في عوالم آلية، وجرّب في محرر مراحل داخل اللعبة بحجم 5×5.',
     img: 'assets/catalog/orvaleth-hero.jpg',
-    payhip: 'https://payhip.com/b/hWmcv',
-    payPrice: 9,
     codester: 'https://www.codester.com/items/76144/orvaleth-godot-3d-clockwork-puzzle-game?ref=Gr8Man',
     play: 'https://play.google.com/store/apps/details?id=com.valkora.serenth.orvaleth',
     codPrice: 14
@@ -83,8 +79,6 @@ const products = [
     descAr: 'خطّط لمسارات خروج آمنة للطائرات الورقية عبر ستة فصول، مع رحلات يومية.',
     img: 'assets/catalog/kivorivane-hero.jpg',
     demo: 'demo/?game=kite',
-    payhip: 'https://payhip.com/b/WsHQp',
-    payPrice: 9,
     codester: 'https://www.codester.com/items/76093/kivorivane-1000-levels-kite-escape-kotlin?ref=Gr8Man',
     codPrice: 14
   },
@@ -98,8 +92,6 @@ const products = [
     desc: 'Pilot a courier drone through four floating regions, dodge telegraphed threats and upgrade between waves.',
     descAr: 'قد طائرة توصيل عبر أربع مناطق عائمة، وتفادَ الأخطار وطوّرها بين الموجات.',
     img: 'assets/catalog/veyravel-hero.jpg',
-    payhip: 'https://payhip.com/b/Jv6fL',
-    payPrice: 9,
     codester: 'https://www.codester.com/items/76079/veyravel-3d-android-action-game-godot?ref=Gr8Man',
     codPrice: 14
   },
@@ -231,15 +223,6 @@ function renderProducts() {
 
     const links = document.createElement('div');
     links.className = 'product-links';
-    if (p.payhip) {
-      const a = document.createElement('a');
-      a.href = addTracking(p.payhip, `payhip-${i + 1}`);
-      a.rel = 'noopener';
-      a.dataset.en = `Payhip · $${p.payPrice}`;
-      a.dataset.ar = `Payhip · $${p.payPrice}`;
-      a.textContent = a.dataset.en;
-      links.append(a);
-    }
     const c = document.createElement('a');
     c.href = addTracking(p.codester, `codester-${i + 1}`);
     c.rel = 'noopener';
