@@ -175,6 +175,14 @@
       ctaDescAr: 'لعبة ألغاز متعددة الفصول بـ Kotlin وJetpack Compose مع قوارير مقفلة وحلّال تلميحات ودعم عربي/إنجليزي ونكهتي Play وCodester.',
       bulletsEn: ['Procedural chapters & locked flasks', 'Certified BFS hint solver', 'Play (noAds) & Codester (withAds) flavors'],
       bulletsAr: ['فصول متدرجة وقوارير مقفلة', 'حلّال تلميحات موثوق', 'نسخة Play بلا إعلانات ونسخة Codester مع AdMob'],
+      codesterEyebrowEn: 'NATIVE KOTLIN ANDROID PUZZLE',
+      codesterEyebrowAr: 'لعبة ألغاز أصلية بـ Kotlin لأندرويد',
+      codesterTitleEn: 'Liquid Sort Puzzle',
+      codesterTitleAr: 'لعبة فرز السوائل',
+      codesterDescEn: 'Multi-chapter Kotlin & Jetpack Compose water-sort mechanics demo with procedural chapters, locked flasks, certified BFS hint solver, and EN/AR RTL UI.',
+      codesterDescAr: 'معاينة لميكانيكية فرز السوائل بلغة Kotlin وJetpack Compose مع فصول متدرجة وقوارير مقفلة وحلّال تلميحات BFS وواجهة عربية وإنجليزية.',
+      codesterBulletsEn: ['Procedural chapters & locked flasks', 'Certified BFS hint solver', 'Bilingual EN/AR RTL interface & procedural audio'],
+      codesterBulletsAr: ['فصول متدرجة وقوارير مقفلة', 'حلّال تلميحات BFS موثوق', 'واجهة ثنائية اللغة عربي/إنجليزي وأصوات مدمجة'],
       links: [
         { labelEn: 'Codester · $14', labelAr: 'Codester · 14$', url: 'https://www.codester.com/items/64630/liquid-sort-puzzle-kotlin-android-game-template?ref=Gr8Man', primary: true },
         { labelEn: 'Play Store Demo', labelAr: 'تجربة Google Play', url: 'https://play.google.com/store/apps/details?id=com.gr8.games.liquidsortpuzzle', primary: false },
@@ -191,11 +199,20 @@
       ctaTitleAr: 'LanternLoom وحزمة Soravel 5 في 1',
       ctaDescEn: '48 handcrafted optical levels in LanternLoom — or get all 5 Kotlin & Compose puzzle games (1,928+ levels) in one studio source pack on Codester.',
       ctaDescAr: '48 مرحلة ضوئية في LanternLoom — أو احصل على 5 ألعاب كاملة (+1,928 مرحلة) في حزمة واحدة جاهزة على Codester.',
-      bulletsEn: ['5 full games in Soravel bundle (1,928+ levels)', '57/57 verified JVM unit tests', 'Complete Kotlin & Compose source pack on Codester ($14)'],
-      bulletsAr: ['5 ألعاب كاملة في حزمة Soravel (+1,928 مرحلة)', '57/57 اختبار وحدة ناجح', 'حزمة مصدر Kotlin وCompose كاملة على Codester بـ 14$'],
+      bulletsEn: ['5 full games in Soravel bundle (1,928+ levels)', '54/54 verified JVM unit tests', 'Complete Kotlin & Compose source pack on Codester ($14)'],
+      bulletsAr: ['5 ألعاب كاملة في حزمة Soravel (+1,928 مرحلة)', '54/54 اختبار وحدة ناجح', 'حزمة مصدر Kotlin وCompose كاملة على Codester بـ 14$'],
+      codesterEyebrowEn: 'NATIVE ANDROID OPTICAL PUZZLE',
+      codesterEyebrowAr: 'لعبة ألغاز ضوئية أصلية لأندرويد',
+      codesterTitleEn: 'LanternLoom: Light Path Puzzle',
+      codesterTitleAr: 'LanternLoom: ألغاز مسارات الضوء',
+      codesterDescEn: '48 handcrafted optical beam levels built with Kotlin & Jetpack Compose, offline BFS hint solver, procedural graphics, and bilingual EN/AR RTL UI.',
+      codesterDescAr: '48 مرحلة ضوئية مصممة بعناية بلغة Kotlin وJetpack Compose مع حلّال تلميحات يعمل دون اتصال ورسومات Canvas ودعم العربية RTL.',
+      codesterBulletsEn: ['48 handcrafted optical beam levels across 4 chapters', '54/54 verified JVM unit tests & offline hint solver', 'Bilingual EN/AR RTL interface & dual Gradle flavors'],
+      codesterBulletsAr: ['48 مرحلة ضوئية عبر 4 فصول', '54/54 اختبار وحدة ناجح وحلّال تلميحات دون اتصال', 'واجهة ثنائية اللغة EN/AR وبنيتا بناء منظمتان'],
       links: [
         { labelEn: 'Soravel 5-in-1 on Codester · $14', labelAr: 'حزمة Soravel على Codester · 14$', url: 'https://www.codester.com/items/76186/puzzle-pack-5-in-1-kotlin-android-game-bundle?ref=Gr8Man', primary: true },
         { labelEn: 'LanternLoom on Codester · $14', labelAr: 'LanternLoom على Codester · 14$', url: 'https://www.codester.com/items/75956/lanternloom-light-path-puzzle-game-for-android?ref=Gr8Man', primary: false },
+        { labelEn: 'Play Store Demo', labelAr: 'تجربة Google Play', url: 'https://play.google.com/store/apps/details?id=com.tavrolin.quemsy.lanternloom', primary: false },
       ],
     },
     kite: {
@@ -211,6 +228,14 @@
       ctaDescAr: '1,200 لوحة هروب حتمية عبر 6 فصول مع تحدٍ يومي ودعم العربية RTL وتكامل AdMob.',
       bulletsEn: ['1,200 deterministic generated boards', 'Available individually ($14) or inside Soravel 5-in-1 ($14) on Codester', 'Complete offline EN & AR reskin guides'],
       bulletsAr: ['1,200 مرحلة حتمية مولّدة', 'متاحة منفردة (14$) أو ضمن حزمة Soravel 5 في 1 (14$) على Codester', 'دليل تعديل كامل بالعربية والإنجليزية'],
+      codesterEyebrowEn: '1,200 LEVELS · KOTLIN PUZZLE',
+      codesterEyebrowAr: '1,200 مرحلة · لعبة ألغاز Kotlin',
+      codesterTitleEn: 'Kivorivane: Kite Escape',
+      codesterTitleAr: 'Kivorivane: هروب الطائرات الورقية',
+      codesterDescEn: '1,200 deterministic paper-kite escape boards across 6 chapters plus daily puzzles, pure-Kotlin board logic, EN/AR RTL UI, and dual Gradle flavors.',
+      codesterDescAr: '1,200 لوحة هروب حتمية عبر 6 فصول مع تحدٍ يومي ومنطق Kotlin صافي وواجهة عربية/إنجليزية RTL.',
+      codesterBulletsEn: ['1,200 deterministic generated boards across 6 chapters', 'Daily puzzle flight challenge & local achievements', 'Complete offline EN & AR documentation guides'],
+      codesterBulletsAr: ['1,200 مرحلة حتمية عبر 6 فصول', 'تحدي طيران يومي وإنجازات محلية', 'دليل تعديل متكامل بالعربية والإنجليزية'],
       links: [
         { labelEn: 'Kivorivane on Codester · $14', labelAr: 'Kivorivane على Codester · 14$', url: 'https://www.codester.com/items/76093/kivorivane-1000-levels-kite-escape-kotlin?ref=Gr8Man', primary: true },
         { labelEn: 'Soravel 5-in-1 on Codester · $14', labelAr: 'حزمة Soravel 5 في 1 · 14$', url: 'https://www.codester.com/items/76186/puzzle-pack-5-in-1-kotlin-android-game-bundle?ref=Gr8Man', primary: false },
@@ -218,7 +243,9 @@
     },
   };
 
-  const urlGame = new URLSearchParams(location.search).get('game');
+  const urlParams = new URLSearchParams(location.search);
+  const urlGame = urlParams.get('game');
+  const isCodesterDemo = urlParams.get('source') === 'codester';
   let activeGame = (urlGame === 'liquid' || urlGame === 'lantern' || urlGame === 'kite') ? urlGame : 'liquid';
   let stageIdx = 0;
   let moves = 0;
@@ -226,6 +253,37 @@
   let history = [];
   let state = null;
   let hitTargets = [];
+
+  function applyCodesterMode() {
+    if (!isCodesterDemo) return;
+    const navEl = document.querySelector('header.top nav');
+    if (navEl) navEl.style.display = 'none';
+    const brandEl = document.querySelector('header.top a.brand');
+    if (brandEl) {
+      brandEl.removeAttribute('href');
+      brandEl.style.pointerEvents = 'none';
+    }
+    const footerLinks = document.querySelector('footer .footer-links');
+    if (footerLinks) footerLinks.style.display = 'none';
+    const introH1 = document.querySelector('.demo-intro h1');
+    if (introH1) {
+      introH1.dataset.en = 'Interactive Puzzle Mechanics Preview';
+      introH1.dataset.ar = 'معاينة تفاعلية لآليات الألغاز';
+      introH1.textContent = isAr() ? introH1.dataset.ar : introH1.dataset.en;
+    }
+    const introLead = document.querySelector('.demo-intro p.lead');
+    if (introLead) {
+      introLead.dataset.en = 'Three lightweight browser previews illustrating the core gameplay loops of our native Kotlin & Jetpack Compose Android puzzle engines.';
+      introLead.dataset.ar = 'ثلاث معاينات تفاعلية خفيفة توضح جوهر آليات اللعب في محركات الألغاز الأصلية بلغة Kotlin وJetpack Compose.';
+      introLead.textContent = isAr() ? introLead.dataset.ar : introLead.dataset.en;
+    }
+    const disclosureEl = document.querySelector('.demo-cta-panel .disclosure');
+    if (disclosureEl) {
+      disclosureEl.dataset.en = 'Note: This HTML5 canvas preview demonstrates core gameplay mechanics only.';
+      disclosureEl.dataset.ar = 'ملاحظة: هذه المعاينة في المتصفح توضح منطق اللعب الأساسي فقط.';
+      disclosureEl.textContent = isAr() ? disclosureEl.dataset.ar : disclosureEl.dataset.en;
+    }
+  }
 
   function clone(obj) {
     return JSON.parse(JSON.stringify(obj));
@@ -384,23 +442,40 @@
       btn.setAttribute('aria-pressed', Number(btn.dataset.stage) === stageIdx ? 'true' : 'false');
     });
 
-    document.getElementById('demo-cta-eyebrow').textContent = ar ? m.eyebrowAr : m.eyebrowEn;
-    document.getElementById('demo-cta-title').textContent = ar ? m.ctaTitleAr : m.ctaTitleEn;
-    document.getElementById('demo-cta-desc').textContent = ar ? m.ctaDescAr : m.ctaDescEn;
+    const eyebrowEl = document.getElementById('demo-cta-eyebrow');
+    const titleEl = document.getElementById('demo-cta-title');
+    const descEl = document.getElementById('demo-cta-desc');
 
+    if (isCodesterDemo) {
+      eyebrowEl.textContent = ar ? (m.codesterEyebrowAr || m.eyebrowAr) : (m.codesterEyebrowEn || m.eyebrowEn);
+      titleEl.textContent = ar ? (m.codesterTitleAr || m.ctaTitleAr) : (m.codesterTitleEn || m.ctaTitleEn);
+      descEl.textContent = ar ? (m.codesterDescAr || m.ctaDescAr) : (m.codesterDescEn || m.ctaDescEn);
+    } else {
+      eyebrowEl.textContent = ar ? m.eyebrowAr : m.eyebrowEn;
+      titleEl.textContent = ar ? m.ctaTitleAr : m.ctaTitleEn;
+      descEl.textContent = ar ? m.ctaDescAr : m.ctaDescEn;
+    }
+
+    const bulletsList = isCodesterDemo
+      ? (ar ? (m.codesterBulletsAr || m.bulletsAr) : (m.codesterBulletsEn || m.bulletsEn))
+      : (ar ? m.bulletsAr : m.bulletsEn);
     const bulletsEl = document.getElementById('demo-cta-bullets');
-    bulletsEl.replaceChildren(...(ar ? m.bulletsAr : m.bulletsEn).map((txt) => {
+    bulletsEl.replaceChildren(...bulletsList.map((txt) => {
       const li = document.createElement('li');
       li.textContent = txt;
       return li;
     }));
 
+    const linksList = isCodesterDemo
+      ? m.links.filter((lk) => lk.url.startsWith('https://play.google.com/'))
+      : m.links;
     const linksEl = document.getElementById('demo-cta-links');
-    linksEl.replaceChildren(...m.links.map((lk) => {
+    linksEl.classList.toggle('hidden', linksList.length === 0);
+    linksEl.replaceChildren(...linksList.map((lk) => {
       const a = document.createElement('a');
       a.href = lk.url;
       a.rel = 'noopener';
-      a.className = lk.primary ? 'button' : 'button button-secondary';
+      a.className = (lk.primary || isCodesterDemo) ? 'button' : 'button button-secondary';
       a.textContent = ar ? lk.labelAr : lk.labelEn;
       return a;
     }));
@@ -627,5 +702,6 @@
     setTimeout(() => { updateUi(); draw(); }, 0);
   });
 
+  applyCodesterMode();
   initStage();
 })();

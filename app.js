@@ -106,6 +106,7 @@ const products = [
     descAr: 'رتّب قطع الفسيفساء ودوّرها، وصمّم أشكالاً قابلة للحل في محرر اللوحات.',
     img: 'assets/catalog/tessavora-hero.jpg',
     codester: 'https://www.codester.com/items/76001/tessavora-mosaic-puzzle-android-game?ref=Gr8Man',
+    play: 'https://play.google.com/store/apps/details?id=com.dralvoni.senvarek.tessavora',
     codPrice: 14
   },
   {
@@ -119,6 +120,7 @@ const products = [
     descAr: 'ألغاز انزلاق تكتيكية ومواجهات ضد الذكاء الاصطناعي أو لاعب آخر، مع تحدٍ يومي واستوديو مراحل.',
     img: 'assets/catalog/pillarglide-hero.jpg',
     codester: 'https://www.codester.com/items/75998/pillarglide-tactical-slide-game-kotlin?ref=Gr8Man',
+    play: 'https://play.google.com/store/apps/details?id=com.brimavel.noruvik.pillarglide',
     codPrice: 14
   },
   {
@@ -133,6 +135,7 @@ const products = [
     img: 'assets/catalog/lanternloom-hero.jpg',
     demo: 'demo/?game=lantern',
     codester: 'https://www.codester.com/items/75956/lanternloom-light-path-puzzle-game-for-android?ref=Gr8Man',
+    play: 'https://play.google.com/store/apps/details?id=com.tavrolin.quemsy.lanternloom',
     codPrice: 14
   }
 ];
@@ -141,7 +144,7 @@ const catalogFilters = [
   { id: 'all', en: 'All kits (10)', ar: 'كل الحزم (10)' },
   { id: 'kotlin', en: 'Kotlin & Compose (8)', ar: 'Kotlin وCompose (8)' },
   { id: 'godot', en: 'Godot 3D (2)', ar: 'Godot ثلاثي الأبعاد (2)' },
-  { id: 'play', en: 'Live Play Demo (2)', ar: 'تجربة Play حية (2)' }
+  { id: 'play', en: 'Live Play Demo (5)', ar: 'تجربة Play حية (5)' }
 ];
 
 let activeFilter = 'all';
