@@ -9,8 +9,10 @@ const products = [
     desc: 'Water-sort puzzles with hidden layers, keyed flasks, chapter trials and a certified hint solver. Offline play.',
     descAr: 'ألغاز فرز الماء بطبقات مخفية وقوارير مقفلة وتحديات فصول وحلّال تلميحات موثوق. لعب دون اتصال.',
     img: 'assets/catalog/liquidsort-hero.jpg',
-    demo: 'demo/?game=liquid',
     codester: 'https://www.codester.com/items/64630/liquid-sort-puzzle-kotlin-android-game-template?ref=Gr8Man',
+    sellanycode: 'https://www.sellanycode.com/item.php?id=28631',
+    sacPrice: 20,
+    video: 'https://www.youtube.com/watch?v=X3z5HdDfmYY',
     play: 'https://play.google.com/store/apps/details?id=com.gr8.games.liquidsortpuzzle',
     codPrice: 14
   },
@@ -24,8 +26,10 @@ const products = [
     desc: 'Five offline puzzle games in one hub: light paths, tactical sliding, mosaics, kite escape and prism blocks.',
     descAr: 'خمس ألعاب ألغاز دون اتصال في مركز واحد: مسارات ضوئية وانزلاق تكتيكي وفسيفساء وطائرات ورقية وكتل منشورية.',
     img: 'assets/catalog/bundle5in1-hero.jpg',
-    demo: 'demo/?game=lantern',
     codester: 'https://www.codester.com/items/76186/puzzle-pack-5-in-1-kotlin-android-game-bundle?ref=Gr8Man',
+    sellanycode: 'https://www.sellanycode.com/item.php?id=28630',
+    sacPrice: 29,
+    video: 'https://www.youtube.com/watch?v=XFTPVgakCII',
     codPrice: 14
   },
   {
@@ -39,6 +43,9 @@ const products = [
     descAr: 'ابنِ آلات للكرات في عوالم آلية، وجرّب في محرر مراحل داخل اللعبة بحجم 5×5.',
     img: 'assets/catalog/orvaleth-hero.jpg',
     codester: 'https://www.codester.com/items/76144/orvaleth-godot-3d-clockwork-puzzle-game?ref=Gr8Man',
+    sellanycode: 'https://www.sellanycode.com/item.php?id=28633',
+    sacPrice: 20,
+    video: 'https://www.youtube.com/watch?v=um0hAMs7dpY',
     play: 'https://play.google.com/store/apps/details?id=com.valkora.serenth.orvaleth',
     codPrice: 14
   },
@@ -53,6 +60,8 @@ const products = [
     descAr: 'ألغاز كتل منشورية مع الحملة والوضع اللانهائي والسباق المحدد والتحدي اليومي.',
     img: 'assets/catalog/trelovix-hero.jpg',
     codester: 'https://www.codester.com/items/76112/trelovix-500-levels-block-puzzle-kotlin?ref=Gr8Man',
+    video: 'https://www.youtube.com/watch?v=_OlZw89RxwE',
+    play: 'https://play.google.com/store/apps/details?id=com.vornalix.zelvarok.trelovix',
     codPrice: 14
   },
   {
@@ -66,6 +75,8 @@ const products = [
     descAr: 'حرّك قطع الدوائر إلى المخرج واشحن المرحّلات وحل لوحة يومية حتمية جديدة.',
     img: 'assets/catalog/zelquavex-hero.jpg',
     codester: 'https://www.codester.com/items/76106/zelquavex-1-200-circuit-puzzles-android?ref=Gr8Man',
+    video: 'https://www.youtube.com/watch?v=49QDPeaT32k',
+    play: 'https://play.google.com/store/apps/details?id=com.vorqali.nexumir.zelquavex',
     codPrice: 14
   },
   {
@@ -78,8 +89,9 @@ const products = [
     desc: 'Plan non-colliding escape paths for paper kites across six scenic chapters, plus daily flights.',
     descAr: 'خطّط لمسارات خروج آمنة للطائرات الورقية عبر ستة فصول، مع رحلات يومية.',
     img: 'assets/catalog/kivorivane-hero.jpg',
-    demo: 'demo/?game=kite',
     codester: 'https://www.codester.com/items/76093/kivorivane-1000-levels-kite-escape-kotlin?ref=Gr8Man',
+    video: 'https://www.youtube.com/watch?v=1FEwvlkDMkw',
+    play: 'https://play.google.com/store/apps/details?id=com.mirveki.savureth.kivorivane',
     codPrice: 14
   },
   {
@@ -93,6 +105,9 @@ const products = [
     descAr: 'قد طائرة توصيل عبر أربع مناطق عائمة، وتفادَ الأخطار وطوّرها بين الموجات.',
     img: 'assets/catalog/veyravel-hero.jpg',
     codester: 'https://www.codester.com/items/76079/veyravel-3d-android-action-game-godot?ref=Gr8Man',
+    sellanycode: 'https://www.sellanycode.com/item.php?id=28634',
+    sacPrice: 20,
+    video: 'https://www.youtube.com/watch?v=i2OG4xjzQNc',
     codPrice: 14
   },
   {
@@ -106,6 +121,7 @@ const products = [
     descAr: 'رتّب قطع الفسيفساء ودوّرها، وصمّم أشكالاً قابلة للحل في محرر اللوحات.',
     img: 'assets/catalog/tessavora-hero.jpg',
     codester: 'https://www.codester.com/items/76001/tessavora-mosaic-puzzle-android-game?ref=Gr8Man',
+    video: 'https://www.youtube.com/watch?v=pxO0F_5HY-4',
     play: 'https://play.google.com/store/apps/details?id=com.dralvoni.senvarek.tessavora',
     codPrice: 14
   },
@@ -120,6 +136,7 @@ const products = [
     descAr: 'ألغاز انزلاق تكتيكية ومواجهات ضد الذكاء الاصطناعي أو لاعب آخر، مع تحدٍ يومي واستوديو مراحل.',
     img: 'assets/catalog/pillarglide-hero.jpg',
     codester: 'https://www.codester.com/items/75998/pillarglide-tactical-slide-game-kotlin?ref=Gr8Man',
+    video: 'https://www.youtube.com/watch?v=5tzqqfIUVZI',
     play: 'https://play.google.com/store/apps/details?id=com.brimavel.noruvik.pillarglide',
     codPrice: 14
   },
@@ -133,8 +150,8 @@ const products = [
     desc: 'Rotate light-path pieces to illuminate each lantern. Includes an offline hint solver and Arabic RTL.',
     descAr: 'دوّر قطع مسار الضوء لإنارة الفوانيس، مع حلّال تلميحات يعمل دون اتصال ودعم العربية RTL.',
     img: 'assets/catalog/lanternloom-hero.jpg',
-    demo: 'demo/?game=lantern',
     codester: 'https://www.codester.com/items/75956/lanternloom-light-path-puzzle-game-for-android?ref=Gr8Man',
+    video: 'https://www.youtube.com/watch?v=4_4Zvb88QS8',
     play: 'https://play.google.com/store/apps/details?id=com.tavrolin.quemsy.lanternloom',
     codPrice: 14
   }
@@ -144,7 +161,7 @@ const catalogFilters = [
   { id: 'all', en: 'All kits (10)', ar: 'كل الحزم (10)' },
   { id: 'kotlin', en: 'Kotlin & Compose (8)', ar: 'Kotlin وCompose (8)' },
   { id: 'godot', en: 'Godot 3D (2)', ar: 'Godot ثلاثي الأبعاد (2)' },
-  { id: 'play', en: 'Live Play Demo (5)', ar: 'تجربة Play حية (5)' }
+  { id: 'play', en: 'Live Play Demo (8)', ar: 'تجربة Play حية (8)' }
 ];
 
 let activeFilter = 'all';
@@ -234,13 +251,26 @@ function renderProducts() {
     c.textContent = c.dataset.en;
     links.append(c);
 
-    if (p.demo) {
-      const d = document.createElement('a');
-      d.href = p.demo;
-      d.dataset.en = 'Web Demo ↗';
-      d.dataset.ar = 'تجربة متصفح ↗';
-      d.textContent = ar ? d.dataset.ar : d.dataset.en;
-      links.append(d);
+    if (p.sellanycode) {
+      const s = document.createElement('a');
+      s.href = addTracking(p.sellanycode, `sellanycode-${i + 1}`);
+      s.target = '_blank';
+      s.rel = 'noopener';
+      s.dataset.en = `SellAnyCode · $${p.sacPrice}`;
+      s.dataset.ar = `SellAnyCode · $${p.sacPrice}`;
+      s.textContent = s.dataset.en;
+      links.append(s);
+    }
+
+    if (p.video) {
+      const v = document.createElement('a');
+      v.href = p.video;
+      v.target = '_blank';
+      v.rel = 'noopener';
+      v.dataset.en = 'Demo Video ↗';
+      v.dataset.ar = 'فيديو العرض ↗';
+      v.textContent = ar ? v.dataset.ar : v.dataset.en;
+      links.append(v);
     }
 
     if (p.play) {
