@@ -164,6 +164,302 @@ const catalogFilters = [
   { id: 'play', en: 'Live Play Demo (8)', ar: 'تجربة Play حية (8)' }
 ];
 
+const playStoreApps = [
+  {
+    slug: 'inkear',
+    group: 'app',
+    featuredOnGamesPage: false,
+    name: 'Inkear: Offline Speech to Text',
+    ar: 'Inkear: تحويل الصوت إلى نص',
+    catEn: 'Productivity',
+    catAr: 'الإنتاجية',
+    desc: 'Speech to text & audio transcription, offline: lectures, meetings, voice notes.',
+    descAr: 'تحويل الصوت إلى نص بدون إنترنت: محاضرات واجتماعات ورسائل صوتية، بخصوصية تامة.',
+    priceEn: 'One-time purchase',
+    priceAr: 'شراء لمرة واحدة',
+    icon: 'assets/play/inkear.png',
+    pkg: 'com.gr8.app.inkear'
+  },
+  {
+    slug: 'habitloom',
+    group: 'app',
+    featuredOnGamesPage: false,
+    name: 'Habit Loom: Daily Streaks',
+    ar: 'Habit Loom: عادات يومية',
+    catEn: 'Productivity',
+    catAr: 'الإنتاجية',
+    desc: 'Build daily habits, tick them off and watch your streaks grow. Private & simple.',
+    descAr: 'ابنِ عادات يومية، وقم بإنجازها، وشاهد سلسلة إنجازاتك تتزايد. الأمر بسيط وسري.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/habitloom.png',
+    pkg: 'com.fennoru.habitloom'
+  },
+  {
+    slug: 'loomicost',
+    group: 'app',
+    featuredOnGamesPage: false,
+    name: 'LoomiCost: Daily Expense Log',
+    ar: 'LoomiCost: سجل المصاريف اليومية',
+    catEn: 'Productivity',
+    catAr: 'الإنتاجية',
+    desc: 'Minimal offline expense tracker. Private, ad-free, and easy to use.',
+    descAr: 'تطبيق بسيط لتتبع النفقات دون اتصال بالإنترنت. يتميز بالخصوصية والخلو من الإعلانات وسهولة الاستخدام.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/loomicost.png',
+    pkg: 'com.velluno.loomicost'
+  },
+  {
+    slug: 'qrcode',
+    group: 'app',
+    featuredOnGamesPage: false,
+    name: 'QR Nexus Pro: Scanner & Creator',
+    ar: 'QR Nexus Pro - قارئ ومولد QR',
+    catEn: 'Tools',
+    catAr: 'أدوات',
+    desc: 'Fast accurate QR code and barcode scanner & generator with custom logos & colors.',
+    descAr: 'أسرع وأدق قارئ ومولد لرموز QR والباركود مع تخصيص الألوان ودعم كامل دون إنترنت.',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/qrcode.png',
+    pkg: 'com.gr8.sup.qrcode'
+  },
+  {
+    slug: 'emsakyah',
+    group: 'app',
+    featuredOnGamesPage: false,
+    name: 'Ramadan 2027 Imsakiyah & Adhan',
+    ar: 'إمساكية رمضان 2027 والأذان',
+    catEn: 'Tools',
+    catAr: 'أدوات',
+    desc: 'Ramadan timetable, prayer times & adhan, Qibla, Quran recitation, azkar, ruqyah.',
+    descAr: 'إمساكية رمضان ومواقيت الصلاة والأذان، القبلة، القرآن مسموعاً، الأذكار والرقية.',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/emsakyah.png',
+    pkg: 'com.gr8.apps.sup.emsakyah'
+  },
+  {
+    slug: 'chess',
+    group: 'game',
+    featuredOnGamesPage: true,
+    name: 'Chess With Sara: Learn & Play',
+    ar: 'شطرنج مع سارة: تعلّم والعب',
+    catEn: 'Board · Chess AI',
+    catAr: 'شطرنج · ذكاء اصطناعي',
+    desc: 'Play online, solve puzzles and learn from Sara, a coach who explains your moves.',
+    descAr: 'العب أونلاين وحلّ الألغاز وتعلّم مع سارة، المدرّبة التي تشرح نقلاتك بصوتها.',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/chess.png',
+    pkg: 'com.gr8.games.chess.chesswithai'
+  },
+  {
+    slug: 'psycho',
+    group: 'game',
+    featuredOnGamesPage: true,
+    name: 'Psycho Mechanics: Physics',
+    ar: 'آليات مجنونة: ألغاز فيزيائية',
+    catEn: 'Simulation · Physics',
+    catAr: 'فيزياء · آلات',
+    desc: 'Build wacky contraptions, trigger chain reactions & solve fun physics puzzles!',
+    descAr: 'ابنِ آلات ذكية، ابتكر تفاعلات متسلسلة، وتحدَّ عقلك بأمتع الألغاز الفيزيائية!',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/psycho.png',
+    pkg: 'com.gr8.games.crazymachines'
+  },
+  {
+    slug: 'gamesbox',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Games Box: All-in-One Games',
+    ar: 'Games Box: ألعاب بدون نت',
+    catEn: '10 Offline Games',
+    catAr: '10 ألعاب بدون نت',
+    desc: '10 offline games: Police Pursuit 3D, Tarneeb, Basra, Dominoes, Solitaire & more.',
+    descAr: '10 ألعاب بدون إنترنت: مطاردة شرطة 3D، طرنيب، باصرة، دومينو، سوليتير وألغاز.',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/gamesbox.png',
+    pkg: 'com.gr8.games.gamesbox'
+  },
+  {
+    slug: 'tarneeb',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Tarneeb With AI',
+    ar: 'طرنيب - لعبة الورق الكلاسيكية',
+    catEn: 'Card Game',
+    catAr: 'لعبة ورق',
+    desc: 'Enjoy authentic Middle Eastern Tarneeb offline with smart AI now!',
+    descAr: 'العب طرنيب الكلاسيكية مع ذكاء اصطناعي متطور وبدون إنترنت في أي وقت وأي مكان!',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/tarneeb.png',
+    pkg: 'com.gr8.games.tarneeb'
+  },
+  {
+    slug: 'basra',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Basra With AI',
+    ar: 'باصره',
+    catEn: 'Card Game',
+    catAr: 'لعبة ورق',
+    desc: 'Play classic Basra With AI! Smart offline duels, 3D felt tables & luxury decks.',
+    descAr: 'العب باصره أوفلاين ضد أذكى ذكاء اصطناعي بأجواء كازينو فاخرة وطاولات 3D مذهلة!',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/basra.png',
+    pkg: 'com.gr8.games.basra'
+  },
+  {
+    slug: 'sudoku',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Sudoku Puzzle',
+    ar: 'تحديات سودوكو',
+    catEn: 'Number Puzzle',
+    catAr: 'ألغاز أرقام',
+    desc: 'Exciting challenges for all levels! Enjoy smart number puzzles with a clean interface.',
+    descAr: 'سودوكو مثيرة لجميع المستويات! استمتع بألغاز أرقام ذكية مع واجهة أنيقة وسهلة.',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/sudoku.png',
+    pkg: 'com.games.sup.sudoku'
+  },
+  {
+    slug: 'liquidsort',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Liquid Sort Puzzle',
+    ar: 'لغز فرز السوائل الملونة',
+    catEn: 'Puzzle',
+    catAr: 'ألغاز',
+    desc: 'Pour coloured water, sort the bottles and solve puzzles at your own pace.',
+    descAr: 'اسكب الماء الملوّن ورتّب الألوان في القوارير وحلّ الألغاز على راحتك.',
+    priceEn: 'Free',
+    priceAr: 'مجاني',
+    icon: 'assets/play/liquidsort.png',
+    pkg: 'com.gr8.games.liquidsortpuzzle'
+  },
+  {
+    slug: 'orvaleth',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Orvaleth: Clockwork Spires',
+    ar: 'أورفاليث: أبراج الساعة',
+    catEn: '3D Puzzle',
+    catAr: 'ألغاز ثلاثية الأبعاد',
+    desc: 'Place 3D parts, set launch power & time the marble across 60 clockwork spires.',
+    descAr: 'ركّب القطع واضبط قوة الإطلاق ووقّت كرة الأثير عبر 60 برجاً ميكانيكياً.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/orvaleth.png',
+    pkg: 'com.valkora.serenth.orvaleth'
+  },
+  {
+    slug: 'tessavora',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Tessavora: Mosaic Puzzle',
+    ar: 'Tessavora: ألغاز الفسيفساء',
+    catEn: 'Puzzle',
+    catAr: 'ألغاز',
+    desc: 'Fit geometric pieces, explore 120 mosaics and design your own puzzles.',
+    descAr: 'ركّب القطع الهندسية، واكتشف ١٢٠ لغز فسيفساء، وصمّم ألغازك الخاصة.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/tessavora.png',
+    pkg: 'com.dralvoni.senvarek.tessavora'
+  },
+  {
+    slug: 'pillarglide',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'PillarGlide: Tactical Slide',
+    ar: 'بيلار غلايد: تكتيك الانزلاق',
+    catEn: 'Board · Strategy',
+    catAr: 'لوحية · تكتيك',
+    desc: 'Glide past stone pillars, conquer 60 puzzles, duel smart AI, and build boards.',
+    descAr: 'انزلق بين الأعمدة الحجرية عبر 60 لغزاً، وتحدَّ الذكاء الاصطناعي، وصمّم لوحاتك.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/pillarglide.png',
+    pkg: 'com.brimavel.noruvik.pillarglide'
+  },
+  {
+    slug: 'lanternloom',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Lanternloom: Light Path Puzzle',
+    ar: 'Lanternloom: لغز مسار الضوء',
+    catEn: 'Puzzle',
+    catAr: 'ألغاز',
+    desc: 'Guide the soothing light beam to illuminate every lantern in 48 peaceful levels.',
+    descAr: 'وجّه شعاع الضوء الهادئ لإضاءة جميع الفوانيس عبر 48 مرحلة ممتعة دون إنترنت.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/lanternloom.png',
+    pkg: 'com.tavrolin.quemsy.lanternloom'
+  },
+  {
+    slug: 'kivorivane',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Kivorivane: Kite Escape',
+    ar: 'كيفوريفين: هروب الطائرات',
+    catEn: 'Puzzle',
+    catAr: 'ألغاز',
+    desc: 'Set folded kites free in 1,200 offline puzzles and a new daily board.',
+    descAr: 'أطلق الطائرات الورقية في ١٢٠٠ لغز بلا إنترنت، مع لوحة جديدة كل يوم.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/kivorivane.png',
+    pkg: 'com.mirveki.savureth.kivorivane'
+  },
+  {
+    slug: 'trelovix',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Trelovix: Prism Grid',
+    ar: 'تريلوفيكس: شبكة الموشور',
+    catEn: 'Puzzle',
+    catAr: 'ألغاز',
+    desc: '500 prism grid levels, daily puzzle, blitz & classic block strategy.',
+    descAr: '٥٠٠ مرحلة ألغاز، تحدٍ يومي، سباق الزمن والنمط الكلاسيكي دون إنترنت.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/trelovix.png',
+    pkg: 'com.vornalix.zelvarok.trelovix'
+  },
+  {
+    slug: 'zelquavex',
+    group: 'game',
+    featuredOnGamesPage: false,
+    name: 'Zelquavex: Circuit Slide',
+    ar: 'زيلكوافيكس: ألغاز الدوائر',
+    catEn: 'Puzzle',
+    catAr: 'ألغاز',
+    desc: 'Slide the arrow, power the relays, and solve 1,200 offline circuit puzzles.',
+    descAr: 'حرّك السهم ونشّط المرحّلات وحلّ ١٢٠٠ لغز دون اتصال.',
+    priceEn: 'Free · No Ads',
+    priceAr: 'مجاني · بلا إعلانات',
+    icon: 'assets/play/zelquavex.png',
+    pkg: 'com.vorqali.nexumir.zelquavex'
+  }
+];
+
+const playFilters = [
+  { id: 'all', en: 'All on Play (19)', ar: 'الكل (19)' },
+  { id: 'game', en: 'Games (14)', ar: 'ألعاب (14)' },
+  { id: 'app', en: 'Apps & Utilities (5)', ar: 'تطبيقات وأدوات (5)' }
+];
+
+let activePlayFilter = 'all';
+
 let activeFilter = 'all';
 
 function addTracking(raw, campaign) {
@@ -299,6 +595,101 @@ function renderProducts() {
   }));
 }
 
+function buildPlayCard(app, ar, prefix, campaign) {
+  const card = document.createElement('article');
+  card.className = 'play-card';
+
+  const head = document.createElement('div');
+  head.className = 'play-card-head';
+
+  const icon = document.createElement('img');
+  icon.className = 'play-icon';
+  icon.src = prefix + app.icon;
+  icon.alt = app.name;
+  icon.width = 52;
+  icon.height = 52;
+  icon.loading = 'lazy';
+
+  const titleWrap = document.createElement('div');
+  const h3 = document.createElement('h3');
+  h3.dataset.en = app.name;
+  h3.dataset.ar = app.ar;
+  h3.textContent = ar ? app.ar : app.name;
+
+  const cat = document.createElement('span');
+  cat.className = 'play-cat';
+  cat.dataset.en = app.catEn;
+  cat.dataset.ar = app.catAr;
+  cat.textContent = ar ? app.catAr : app.catEn;
+
+  titleWrap.append(h3, cat);
+  head.append(icon, titleWrap);
+
+  const desc = document.createElement('p');
+  desc.dataset.en = app.desc;
+  desc.dataset.ar = app.descAr;
+  desc.textContent = ar ? app.descAr : app.desc;
+
+  const foot = document.createElement('div');
+  foot.className = 'play-card-foot';
+
+  const btn = document.createElement('a');
+  btn.className = 'play-open-btn';
+  btn.href = addTracking(`https://play.google.com/store/apps/details?id=${app.pkg}`, campaign);
+  btn.target = '_blank';
+  btn.rel = 'noopener';
+  btn.dataset.en = 'Google Play ↗';
+  btn.dataset.ar = 'Google Play ↗';
+  btn.textContent = 'Google Play ↗';
+
+  const price = document.createElement('span');
+  price.className = 'play-price-tag';
+  price.dataset.en = app.priceEn;
+  price.dataset.ar = app.priceAr;
+  price.textContent = ar ? app.priceAr : app.priceEn;
+
+  foot.append(btn, price);
+  card.append(head, desc, foot);
+  return card;
+}
+
+function renderPlayFilters() {
+  const bar = document.querySelector('#play-filters');
+  if (!bar) return;
+  const ar = isArabic();
+  bar.replaceChildren(...playFilters.map((f) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'filter-pill';
+    btn.setAttribute('aria-pressed', activePlayFilter === f.id ? 'true' : 'false');
+    btn.textContent = ar ? f.ar : f.en;
+    btn.addEventListener('click', () => {
+      activePlayFilter = f.id;
+      renderPlayFilters();
+      renderPlayDirectory();
+    });
+    return btn;
+  }));
+}
+
+function renderPlayDirectory() {
+  const root = document.querySelector('#play-directory');
+  if (!root) return;
+  const ar = isArabic();
+  const prefix = root.dataset.assetPrefix || '';
+  const visible = playStoreApps.filter((a) => activePlayFilter === 'all' || a.group === activePlayFilter);
+  root.replaceChildren(...visible.map((a) => buildPlayCard(a, ar, prefix, `play-dir-${a.slug}`)));
+}
+
+function renderMoreGames() {
+  const root = document.querySelector('#more-games-grid');
+  if (!root) return;
+  const ar = isArabic();
+  const prefix = root.dataset.assetPrefix || '';
+  const visible = playStoreApps.filter((a) => a.group === 'game' && !a.featuredOnGamesPage);
+  root.replaceChildren(...visible.map((a) => buildPlayCard(a, ar, prefix, `play-games-${a.slug}`)));
+}
+
 function updateSavings() {
   const spendEl = document.querySelector('#spend');
   const priceEl = document.querySelector('#price');
@@ -396,6 +787,9 @@ function setLanguage(lang) {
 
   renderFilters();
   renderProducts();
+  renderPlayFilters();
+  renderPlayDirectory();
+  renderMoreGames();
   updateSavings();
 }
 
